@@ -109,19 +109,6 @@ height: 20px; cursor: pointer;
 const ViewList = () => {
 
   const [bookings, setBookings] = useState([]);
-  function compare(aa, bb) {
-    if (aa.type > bb.type)
-      return 1;
-    else if (aa.type === bb.type) {
-      if (aa.checkOut > bb.checkOut)
-        return 1
-      else
-        return -1;
-
-    }
-    else
-      return -1;
-  }
 
   useEffect(() => {
     fetchData()
@@ -134,8 +121,6 @@ const ViewList = () => {
 
     }).then(({ data }) => {
       console.log(data);
-
-      data.sort(compare);
       setBookings(data);
     })
       .catch(err => {
