@@ -1,26 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import roomURL from '../Images/Room.jpg';
+import Edit_Icon from '../Images/EditIcon.png';
+import Delete_Icon from '../Images/DeleteIcon.png';
 
 const Main = styled.div`
-  background:url("https://rare-gallery.com/uploads/posts/535025-accommodation.jpg");
+  background:url(${roomURL});
   background-size:cover;
-  height:110vh;
+  height:100vh;
 
 `
 const Glass = styled.div`
   position: relative;
   z-index: 1;
-  width: 900px;
+  width: 70vw;
   margin:auto;
-  height: 600px;
+  height: 75vh;
   box-shadow: 20px 20px 50px rgba(0,0,0,0.7);
   border-radius: 15px;
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5) ;
   background:rgba(255, 255, 255, 0.1) ;
   backdrop-filter: blur(5px);
-  overflow: hidden;
+  overflow: auto;
 `
 const Container = styled.div`
   height: 50px;
@@ -68,7 +71,7 @@ const Table = styled.table`
   border-collapse: collapse;
   width: 100%;
   margin:auto;
-  max-width: 800px;
+  max-width: 900px;
 `;
 
 const TableHead = styled.thead`
@@ -208,13 +211,13 @@ const ViewList = () => {
                     <TableBodyCell>{booking.price}</TableBodyCell>
                     <TableBodyCell>
                       <Link to={`/editBooking/${booking._id}`}> <EditButton
-                        src="https://www.freeiconspng.com/thumbs/edit-icon-png/edit-editor-pen-pencil-write-icon--4.png"
+                        src={Edit_Icon}
                         alt="edit icon"
                       /></Link>
                     </TableBodyCell>
                     <TableBodyCell>
                       <CancelButton onClick={() => deleteItem(booking._id, booking.checkIn)}
-                        src="https://cdn.pixabay.com/photo/2021/02/19/14/44/delete-button-6030454_960_720.png"
+                        src={Delete_Icon}
                         alt="cancel icon"
                       />
                     </TableBodyCell>

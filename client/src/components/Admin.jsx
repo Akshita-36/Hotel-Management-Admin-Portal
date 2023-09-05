@@ -1,24 +1,24 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import roomURL from '../Images/Room.jpg'
 
 const CenteredContainer = styled.div`
   top:80px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background:url("https://rare-gallery.com/uploads/posts/535025-accommodation.jpg");
+  background:url(${roomURL});
   background-size: cover;
   justify-content: center;
-  height: 91.5vh;
+  height: 91.2vh;
 `;
 const MainCenter = styled.div`
     position: relative;
     z-index: 1;
-    width: 400px;
-    top: 19px;
+    width: 30vw;
     margin: auto;
-    height: 500px;
-    margin-top: 100px;
+    height: 65vh;
+    margin-top: 10%;
     box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
     border-radius: 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -39,6 +39,7 @@ const AdminText = styled.h1`
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
+  align-items:center;
   margin-top: 100px;
 `;
 

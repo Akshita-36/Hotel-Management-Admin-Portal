@@ -2,9 +2,10 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom';
+import roomURL from '../Images/Room.jpg'
 
 const Main = styled.div`
-background:url("https://rare-gallery.com/uploads/posts/535025-accommodation.jpg");
+background:url(${roomURL});
   background-size:cover;
   height:100vh;
   overflow:hidden;
@@ -23,10 +24,10 @@ const TopContainer = styled.div`
 const Glass = styled.div`
     position: relative;
     z-index: 1;
-    width: 500px;
-    margin-top:15px;
-    margin-left:35%;
-    height: 670px;
+    width: 50vw;
+    margin:auto;
+    margin-top:2%;
+    height: 87vh;
     box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
     border-radius: 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -174,9 +175,9 @@ export default function EditBookings() {
     <>
       <Main>
         <TopContainer>
-          <Link to="/" style={{ textDecoration: "none" }}><A>HOME</A></Link>
-          <Text>BOOK A ROOM HERE</Text>
-          <Link to="/viewList" style={{ textDecoration: "none" }}><A>VIEW LIST</A></Link>
+          <Link to="/" style={{ textDecoration: "none" }}><A>GO TO HOME PAGE</A></Link>
+          <Text>EDIT ROOM BOOKING</Text>
+          <Link to="/viewList" style={{ textDecoration: "none" }}><A>VIEW BOOKINGS</A></Link>
 
 
         </TopContainer>
